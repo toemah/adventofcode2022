@@ -1,8 +1,7 @@
+const xhr = new XMLHttpRequest();
 // part 1
-/*const xhr = new XMLHttpRequest();
-const solve = function () {
-    let arr = xhr.responseText.split("\n");
-    arr.pop();
+const solve1 = function () {
+    let arr = xhr.responseText.trim().split("\n");
     let total = 0;
     arr.forEach(str => {
         const sections = str.split(","),
@@ -16,14 +15,9 @@ const solve = function () {
     });
     console.log(total);
 }
-xhr.onload = solve;
-xhr.open("GET", "./input");
-xhr.send();*/
 // part 2
-/*const xhr = new XMLHttpRequest();
-const solve = function () {
-    let arr = xhr.responseText.split("\n");
-    arr.pop();
+const solve2 = function () {
+    let arr = xhr.responseText.trim().split("\n");
     let total = 0;
     arr.forEach(str => {
         const sections = str.split(","),
@@ -36,6 +30,8 @@ const solve = function () {
     });
     console.log(total);
 }
-xhr.onload = solve;
+// run
+xhr.onload = solve1;
 xhr.open("GET", "./input");
-xhr.send();*/
+xhr.responseType = "text";
+xhr.send();
