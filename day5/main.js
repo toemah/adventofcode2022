@@ -44,7 +44,6 @@ const solve1 = function () {
     console.log(stacks.map(s => s[s.length - 1]).join(""));
 }
 // part 2
-// part 1
 const solve2 = function () {
     const [stack, instructions] = xhr.responseText.split(/\n\n/);
     stack.split("\n").forEach(str => {
